@@ -32,18 +32,18 @@ npm install
 **4.3 导入**<br>
 以 inventory_management 目录作为小程序项目的目录，在微信开发者工具中导入它。<br>
 没有自己的小程序ID的，可以使用测试号。<br>
-![](./img/import.PNG)<br>
+![](./img/import.png?raw=true)<br>
 <br>
 勾选“[增强编译](https://developers.weixin.qq.com/miniprogram/dev/devtools/codecompile.html#%E5%A2%9E%E5%BC%BA%E7%BC%96%E8%AF%91)，使用 npm 模块”<br>
-![](./img/setting.PNG)<br>
+![](./img/setting.png?raw=true)<br>
 <br>
 再“[构建 npm](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)”<br>
-![](./img/build.PNG)<br>
+![](./img/build.png?raw=true)<br>
 <br>
 完成上述步骤，即可开始使用该小程序<br>
 <br>
 **注意：** 连接的kintone地址需要在小程序的[域名配置](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html#1.%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE)中登记，或者勾选“[不校验合法域名](https://developers.weixin.qq.com/miniprogram/dev/devtools/project.html#%E9%A1%B9%E7%9B%AE%E8%AE%BE%E7%BD%AE)”<br>
-![](./img/setting2.PNG)
+![](./img/setting2.png?raw=true)
 
 # License
 MIT License
