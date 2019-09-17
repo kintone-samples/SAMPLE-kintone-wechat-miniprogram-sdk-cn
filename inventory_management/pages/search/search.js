@@ -91,6 +91,7 @@ Page({
           {text: '取消'},
           {text: '确定', data: {id: id}}
         ],
+        triggerSearch: false
       });
     } else {
       wx.navigateTo({url: `../inventory/operate?cmd=${cmd}&id=${id}`});
