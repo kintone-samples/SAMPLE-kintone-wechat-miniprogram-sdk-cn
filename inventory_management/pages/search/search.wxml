@@ -1,0 +1,19 @@
+<view class="page">
+    <view class="page__bd">
+        <mp-searchbar
+                bindselectresult="selectResult"
+                bindslidebuttontap="slideButtonTap"
+                placeholder="商品名称搜索"
+                search="{{search}}"
+                slideButtons="{{slideButtons}}"
+                buttonText="添加商品"
+                bindbuttontap="addButtonTap"
+                onLoadSearch="{{true}}"
+                triggerSearch="{{triggerSearch}}"
+        ></mp-searchbar>
+    </view>
+    <mp-dialog title="{{dialogTitle}}" data-item-id="{{deleteItemId}}" show="{{dialogShow}}" bindbuttontap="dialogButtonTap" buttons="{{dialogButtons}}">
+        <view>确定删除该商品吗？</view>
+        <mp-loading type="circle" show="{{loadingShow}}" tips=""></mp-loading>
+    </mp-dialog>
+</view>

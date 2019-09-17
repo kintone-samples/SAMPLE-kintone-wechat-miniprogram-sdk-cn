@@ -1,0 +1,16 @@
+{
+  "name": "inventory_management",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@kintone/kintone-wechat-miniprogram-sdk": "0.1.0"
+  },
+  "author": "Cybozu, Inc.",
+  "license": "MIT",
+  "keywords": [
+    "inventory management",
+    "kintone",
+    "cybozu"
+  ]
+}

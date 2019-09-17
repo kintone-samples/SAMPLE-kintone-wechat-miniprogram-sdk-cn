@@ -1,0 +1,27 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__label">{{inventoryAmountTitle}}</view>
+                <view class="weui-form-preview__value_in-hd">{{inventoryAmount}} {{unit}}</view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item" wx:for="{{commodityInfo}}" wx:key="i">
+                    <view class="weui-form-preview__label">{{item.name}}</view>
+                    <view class="weui-form-preview__value">{{item.value}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{imageTitle}}</view>
+                    <view class="weui-form-preview__value">
+                        <mp-loading type="circle" tips="{{loadingTips}}" show="{{loadingShow}}"></mp-loading>
+                        <image wx:if="{{imagePath}}" class="image" src="{{imagePath}}"/>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <navigator url="../inventory/operate?cmd=in&id={{id}}" open-type="redirect" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">入库</navigator>
+                <navigator url="../inventory/operate?cmd=out&id={{id}}" open-type="redirect" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">出库</navigator>
+            </view>
+        </view>
+    </view>
+</view>

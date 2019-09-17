@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "mp-cells": "../../weui-miniprogram/cells/cells",
+    "mp-cell": "../../weui-miniprogram/cell/cell",
+    "mp-form": "../../weui-miniprogram/form/form",
+    "mp-toptips": "../../weui-miniprogram/toptips/toptips",
+    "mp-uploader": "../../weui-miniprogram/uploader/uploader"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "添加新商品",
+  "navigationBarTextStyle": "black"
+}

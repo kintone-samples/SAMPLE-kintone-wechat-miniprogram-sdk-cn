@@ -1,0 +1,23 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page">
+    <view class="page__bd">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells>
+                <mp-cell show-error prop="inOutDate" title="{{inOutDateTitle}}">
+                    <picker data-field="inOutDate" mode="date" value="{{inOutDate}}" bindchange="formDateChange">
+                        <view class="weui-input">{{inOutDate}}</view>
+                    </picker>
+                </mp-cell>
+                <mp-cell show-error prop="inOutAmount" title="{{inOutAmountTitle}}">
+                    <input bindinput="formInputChange" data-field="inOutAmount" class="weui-input" placeholder="请输入{{inOutAmountTitle}}"/>
+                </mp-cell>
+                <mp-cell prop="inOutNote" title="{{inOutNoteTitle}}">
+                    <input bindinput="formInputChange" data-field="inOutNote" class="weui-input" placeholder="请输入{{inOutNoteTitle}}"/>
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="default" bindtap="submitForm" loading="{{buttonLoading}}">确定</button>
+        </view>
+    </view>
+</view>

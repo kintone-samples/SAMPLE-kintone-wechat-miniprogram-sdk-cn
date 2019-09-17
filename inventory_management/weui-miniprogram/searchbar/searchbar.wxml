@@ -1,0 +1,31 @@
+<view class="weui-search-bar__with-btn">
+    <view class="weui-search-bar {{extClass}}">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="15"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="{{placeholder}}" value="{{value}}" focus="{{focus}}" bindblur="inputBlur" bindfocus="inputFocus" bindinput="inputChange"/>
+                <view class="weui-icon-clear" wx:if="{{value.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="15"></icon>
+                </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{searchState}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="15"></icon>
+                <view class="weui-search-bar__text">{{placeholder}}</view>
+            </label>
+        </view>
+        <view wx:if="{{cancel && searchState}}" class="weui-search-bar__cancel-btn" bindtap="hideInput">{{cancelText}}</view>
+        <view class="weui-search-bar__cancel-btn" bindtap="search">{{confirmText}}</view>
+    </view>
+    <button type="default" size="mini" bindtap="buttonTap">{{buttonText}}</button>
+</view>
+<mp-cells class="searchbar-result {{extClass}}" wx:if="{{result.length > 0}}">
+    <mp-slideview ext-class="{{index % 2 === 0 ? 'lineTwo' : 'lineOne'}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-index="{{index}}" wx:for="{{result}}" wx:key="unique">
+        <mp-cell bindtap="selectResult" data-index="{{index}}" hover>
+            <view class="weui-flex {{idx === 0 ? 'searchbar-result-cell__first-view' : ''}} " wx:for="{{item.record}}" wx:key="i" wx:for-item="line" wx:for-index="idx">
+                <view class="weui-flex__item {{idx === 0 && fi === 0 ? 'searchbar-result__bold' : ''}}" wx:for="{{line}}" wx:key="j" wx:for-item="flexItem" wx:for-index="fi">
+                    {{flexItem}}
+                </view>
+            </view>
+        </mp-cell>
+    </mp-slideview>
+</mp-cells>

@@ -1,0 +1,61 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page">
+    <view class="page__bd">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells>
+                <mp-cell show-error prop="commodityName" title="{{commodityNameTitle}}">
+                    <input bindinput="formInputChange" data-field="commodityName" class="weui-input" placeholder="请输入{{commodityNameTitle}}"/>
+                </mp-cell>
+                <mp-cell prop="commodityNumber" title="{{commodityNumberTitle}}">
+                    <input bindinput="formInputChange" data-field="commodityNumber" class="weui-input" placeholder="请输入{{commodityNumberTitle}}"/>
+                </mp-cell>
+                <mp-cell show-error prop="inOutDate" title="{{inOutDateTitle}}">
+                    <picker data-field="inOutDate" mode="date" value="{{inOutDate}}" bindchange="formDateChange">
+                        <view class="weui-input">{{inOutDate}}</view>
+                    </picker>
+                </mp-cell>
+                <mp-cell show-error prop="inOutAmount" title="{{inOutAmountTitle}}" inline>
+                    <input bindinput="formInputChange" data-field="inOutAmount" class="weui-input" placeholder="请输入{{inOutAmountTitle}}"/>
+                </mp-cell>
+                <mp-cell show-error prop="unit" title="{{unitTitle}}" inline>
+                    <input bindinput="formInputChange" data-field="unit" class="weui-input" placeholder="请输入{{unitTitle}}"/>
+                </mp-cell>
+                <mp-cell prop="inOutNote" title="{{inOutNoteTitle}}">
+                    <input bindinput="formInputChange" data-field="inOutNote" class="weui-input" placeholder="请输入{{inOutNoteTitle}}"/>
+                </mp-cell>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">{{warehouseTitle}}</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker bindchange="warehouseChange" value="{{warehouseIndex}}" range="{{warehouses}}">
+                            <view class="weui-select weui-select_in-select-after">{{warehouses[warehouseIndex]}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">{{warehousePositionTitle}}</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker bindchange="warehousePositionChange" value="{{warehousePositionIndex}}" range="{{warehousePositions}}">
+                            <view class="weui-select weui-select_in-select-after">{{warehousePositions[warehousePositionIndex]}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <mp-cell prop="commoditySize" title="{{commoditySizeTitle}}">
+                    <input bindinput="formInputChange" data-field="commoditySize" class="weui-input" placeholder="请输入{{commoditySizeTitle}}"/>
+                </mp-cell>
+                <mp-cell prop="commodityPrice" title="{{commodityPriceTitle}}" footer="元">
+                    <input bindinput="formInputChange" data-field="commodityPrice" class="weui-input" placeholder="请输入{{commodityPriceTitle}}"/>
+                </mp-cell>
+                <mp-cell>
+                    <mp-uploader title="{{imageTitle}}" upload="{{uploadFile}}" binddelete="deleteFile" max-count="1"></mp-uploader>
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="default" bindtap="submitForm" loading="{{buttonLoading}}">确定</button>
+        </view>
+    </view>
+</view>

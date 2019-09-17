@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/commodity/detail",
+    "pages/commodity/add",
+    "pages/inventory/operate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "库存管理",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

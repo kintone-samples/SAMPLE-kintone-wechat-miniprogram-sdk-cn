@@ -1,0 +1,71 @@
+.searchbar-result {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.searchbar-result .weui-cell__bd {
+    padding: 2px 0 2px 20px;
+    color: #666;
+}
+
+.searchbar-result:before {
+    display: none;
+}
+
+.searchbar-result .slideButton_in .weui-slideview__btn {
+    background-color: #94dbf2;
+}
+
+.searchbar-result .slideButton_out .weui-slideview__btn {
+    background-color: #3d9dc6;
+}
+
+.searchbar-result .weui-slideview__btn-group_default ~ .weui-slideview__btn-group_default:before,
+.searchbar-result .weui-slideview__btn-group_warn ~ .weui-slideview__btn-group_warn:before {
+    border-left: none;
+}
+
+.searchbar-result__bold {
+    font-weight: bold;
+}
+
+.searchbar-result .searchbar-result-cell__first-view {
+    margin-bottom: 2px;
+    font-size: 17px;
+}
+
+.searchbar-result .weui-cell {
+    font-size: 15px;
+}
+
+.weui-search-bar__with-btn {
+    display: flex;
+    margin: 0 5px;
+    align-items: center;
+}
+
+.weui-search-bar__with-btn .weui-search-bar {
+    margin-right: 8px;
+    background-color: #fff;
+}
+
+.weui-search-bar__with-btn .weui-search-bar__box,
+.weui-search-bar__with-btn .weui-search-bar__label {
+    background-color: #E7E9EE;
+    border-radius: 3pt;
+}
+
+.weui-search-bar__with-btn button[type=default] {
+    margin-right: 1px;
+    white-space: nowrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    background-color: #4cc0f2;
+    color: #fff;
+}
+
+.weui-search-bar__with-btn .button-hover[type=default] {
+    background-color: #10b6fe;
+    color: #fff;
+}

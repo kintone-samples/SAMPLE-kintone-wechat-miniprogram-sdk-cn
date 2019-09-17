@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-loading": "../../weui-miniprogram/loading/loading"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "商品详情",
+  "navigationBarTextStyle": "black"
+}

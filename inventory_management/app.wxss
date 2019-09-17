@@ -1,0 +1,30 @@
+/**app.wxss**/
+@import './weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+page {
+  font-size: 16px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.lineOne {
+  background-color: #f3fafc;
+}
+
+.lineTwo {
+  background-color: #fff;
+}
+
+.weui-btn-area {
+  margin: 8px 50px;
+}
+
+.weui-btn-area .weui-btn[type=default],
+.weui-btn-area .weui-btn[loading][type=default] {
+  background-color: #4cc0f2;
+  color: #fff;
+}
+
+.weui-btn-area .button-hover[type=default] {
+  background-color: #10b6fe;
+  color: #fff;
+}
